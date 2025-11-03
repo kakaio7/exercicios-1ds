@@ -1,5 +1,5 @@
 // CRIE UMA LÓGICA ABAIXO
-const prompt = require('prompt-sync')()
+const prompt = require("prompt-sync")()
 
 console.log("Bem-vindo a TechFactory")
 console.log("Aqui nós realizamos um relatório completo da produção diária")
