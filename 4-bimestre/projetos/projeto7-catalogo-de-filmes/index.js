@@ -1,60 +1,44 @@
 // CRIE UMA LÓGICA ABAIXO
-const prompt = require("prompt-sync")()
+let filme1 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme2 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme3 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme4 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme5 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme6 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme7 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme8 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme9 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme10 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
 
-let filme1 = {}
-let filme2 = {}
-let filme3 = {}
-let filme4 = {}
-let filme5 = {}
-let filme6 = {}
-let filme7 = {}
-let filme8 = {}
-let filme9 = {}
-let filme10 = {}
+const filme = {filme1, filme2, filme3, filme4, filme5, filme6, filme7, filme8, filme9, filme10}
 
-let filmes = [filme1, filme2, filme3, filme4, filme5, filme6, filme7, filme8, filme9, filme10]
-
-for (let i = 0; i < filmes.length; i++) {
-    filmes[i].titulo = prompt(`Insira o nome do filme ${i + 1}: `)
-    filmes[i].genero = prompt(`Insira o gênero do filme: `)
-    filmes[i].ano = prompt(`Insira o ano de lançamento do filme: `)
-
-    let avaliacao
-    do {
-        avaliacao = parseInt(prompt(`Insira a avaliação do filme de 0 a 10: `));
-        if (avaliacao < 0 || avaliacao > 10) {
-            console.log("Insira uma avaliação de 0 a 10")
-        }
-    } while (avaliacao < 0 || avaliacao > 10)
-
-    filmes[i].avaliacao = avaliacao
-}
-
-let melhorFilme = filmes[0]
-let soma = 0
-
-for (let i = 0; i < filmes.length; i++) {
-    soma += filmes[i].avaliacao
-
-    if (filmes[i].avaliacao > melhorFilme.avaliacao) {
-        melhorFilme = filmes[i]
+const avaliacoes = [filme1.avaliacao, filme2.avaliacao, filme3.avaliacao, filme4.avaliacao, filme5.avaliacao, filme6.avaliacao, filme7.avaliacao, filme8.avaliacao, filme9.avaliacao, filme10.avaliacao]
+let maior = avaliacoes[0]
+for(let i = 1; i < avaliacoes.length; i++){
+    if(avaliacoes[i] > maior){
+        maior = avaliacoes[i]
     }
 }
-
-let media = (soma / filmes.length).toFixed(1)
-
-let catalogo = ""
-for (let i = 0; i < filmes.length; i++) {
-    catalogo += `${i + 1}. ${filmes[i].titulo} - ${filmes[i].genero}\n`
-}
-
+let filmemaior = avaliacoes.indexOf(maior) + 1
+let soma = avaliacoes.reduce((acumulador, valorAtual) => { return valorAtual + acumulador}, 0) 
+let media = soma / avaliacoes.length
 console.log(`
-=== Catálogo de Filmes ===
-${catalogo}
-Filme mais bem avaliado:
-${melhorFilme.titulo} (${melhorFilme.avaliacao}/10)
+    === Catalogo de filmes ===
+    1. ${filme1.titulo} - ${filme1.genero}
+    2. ${filme2.titulo} - ${filme2.genero}
+    3. ${filme3.titulo} - ${filme3.genero}
+    4. ${filme4.titulo} - ${filme4.genero}
+    5. ${filme5.titulo} - ${filme5.genero}
+    6. ${filme6.titulo} - ${filme6.genero}
+    7. ${filme7.titulo} - ${filme7.genero}
+    8. ${filme8.titulo} - ${filme8.genero}
+    9. ${filme9.titulo} - ${filme9.genero}
+    10. ${filme10.titulo} - ${filme10.genero}
 
-Média geral das avaliações: ${media}
-`)
+    Filme mais bem avaliado:
+    ${filme[`filme${filmemaior}`].titulo} (${maior})
+
+    media geral das avaliaçoes:${media}
+    `)
 // === NÃO MODIFIQUE OU ADICIONE NADA ABAIXO ============
 module.exports = { filme1, filme2, filme3, filme4, filme5, filme6, filme7, filme8, filme9, filme10 }
