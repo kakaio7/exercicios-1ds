@@ -1,14 +1,14 @@
 // CRIE UMA LÓGICA ABAIXO
-let filme1 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme2 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme3 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme4 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme5 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme6 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme7 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme8 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme9 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
-let filme10 = {titulo: "filme", genero: "terror", ano: 2009, avaliacao: 10}
+let filme1 = {titulo: "Homem aranha", genero: "ação", ano: 2009, avaliacao: 10}
+let filme2 = {titulo: "Batman", genero: "suspense", ano: 2022, avaliacao: 7.5}
+let filme3 = {titulo: "Olhos famintos", genero: "terror", ano: 2001, avaliacao: 9.5}
+let filme4 = {titulo: "Vingadores", genero: "ação", ano: 2013, avaliacao: 8.5}
+let filme5 = {titulo: "Coringa", genero: "drama", ano: 2019, avaliacao: 6}
+let filme6 = {titulo: "Invocação do Mal", genero: "terror", ano: 2013, avaliacao: 6.5}
+let filme7 = {titulo: "Titanic", genero: "romance", ano: 1997, avaliacao: 4.5}
+let filme8 = {titulo: "Doutor Estranho no Multiverso da Loucura", genero: "fantasia", ano: 2022, avaliacao: 9}
+let filme9 = {titulo: "Oppenheimer", genero: "drama", ano: 2023, avaliacao: 4}
+let filme10 = {titulo: "Jurassic Word", genero: "ficção", ano: 2015, avaliacao: 5.5}
 
 const filme = {filme1, filme2, filme3, filme4, filme5, filme6, filme7, filme8, filme9, filme10}
 
